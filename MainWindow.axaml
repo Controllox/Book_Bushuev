@@ -4,6 +4,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Book_Bushuev.MainWindow"
-        Title="Book_Bushuev">
-    Welcome to Avalonia!
+        Title="Book_Bushuev" Height="450" Width="800" MinHeight="450" MinWidth="800">
+        <Grid>
+        <Grid Margin="0,0,0.4,0" Height="120" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock 
+                Text="#Поиск по наименованию:" 
+                HorizontalAlignment="Left" 
+                Margin="10,10,0,0" 
+                VerticalAlignment="Top" 
+                FontWeight="Bold"
+            />
+            <TextBox 
+                x:Name="tbSearch"
+                Height="23"
+                KeyUp = "Search_Book"
+                Margin="10, -24, 9.6,0" 
+                TextWrapping="Wrap" 
+                Grid.ColumnSpan="3"
+            />
+            <TextBlock 
+                Text="#Сортировка:" 
+                HorizontalAlignment="Left" 
+                Margin="10,70,0,0" 
+                VerticalAlignment="Top" 
+                FontWeight="Bold"
+            />
+            <ComboBox 
+                x:Name="cbAuthors" 
+                Margin="10,90,9.8,0" 
+                VerticalAlignment="Top"  
+                PlaceholderText="Авторы"
+                SelectionChanged = "SelectAuthor"
+            />
+            <ComboBox 
+                x:Name="cbGenres" 
+                Margin="10.2,90,9.8,0" 
+                VerticalAlignment="Top"  
+                Grid.Column="1" 
+                PlaceholderText="Жанры"
+                SelectionChanged = "SelectAuthor"
+            />
+            <ComboBox 
+                x:Name="cbYear" 
+                Margin="10.2,90,9.6,0" 
+                VerticalAlignment="Top"  
+                Grid.Column="2" 
+                PlaceholderText="Годы"
+                SelectionChanged = "SelectAuthor"
+            />
+        </Grid>
+        <ScrollViewer Margin="0,120,-0.4, 0">
+            <StackPanel x:Name="parent">
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
 </Window>
