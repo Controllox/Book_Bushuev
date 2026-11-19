@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Book_Bushuev
+namespace Book_Bushuev.Classes
 {
     public class Author
     {
@@ -11,13 +11,13 @@ namespace Book_Bushuev
             this.Id = Id;
             this.FIO =FIO;
         }
-        public static List<Genre> AllGenres()
+        public static List<Author> AllAuthors()
         {
-            List<Genre> allGenres = new List<Genre>();
-            allGenres.Add(new Genre(1, "Виктор Пелевин"));
-            allGenres.Add(new Genre(2, "Александра Маринина"));
-            allGenres.Add(new Genre(3, "Ольга Герр"));
-            return allGenres;
+            List<Author> allAuthors = new List<Author>();
+            allAuthors.Add(new Author(1, "Виктор Пелевин"));
+            allAuthors.Add(new Author(2, "Александра Маринина"));
+            allAuthors.Add(new Author(3, "Ольга Герр"));
+            return allAuthors;
         }
     }
 }

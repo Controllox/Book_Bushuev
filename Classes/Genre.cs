@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Book_Bushuev
+namespace Book_Bushuev.Classes
 {
     public class Genre
     {
