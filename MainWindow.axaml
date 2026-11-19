@@ -6,7 +6,7 @@
         x:Class="Book_Bushuev.MainWindow"
         Title="Book_Bushuev" Height="450" Width="800" MinHeight="450" MinWidth="800">
         <Grid>
-        <Grid Margin="0,0,0.4,0" Height="120" VerticalAlignment="Top">
+        <Grid Margin="0,0,0,0" Height="120" VerticalAlignment="Top" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
